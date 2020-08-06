@@ -1,0 +1,19 @@
+{
+  "params":
+  {
+    "local_server": "True",
+    "local_uri": "mysql://root:@localhost/sampledb1",
+    "prod_uri": "mysql://root:@localhost/sampledb1",
+    "fb_url": "https://www.facebook.com/shubhayan.sarkar.37/",
+    "blogname": "SARKAR",
+    "gmail_user": "sarkarsar123@gmail.com",
+    "gmail_password": "a123b123",
+    "about_text": "this is about text",
+    "no_of_posts":20,
+    "login_image": "cat1.png",
+    "admin_user": "shubhayan",
+    "admin_password": "hello",
+    "upload_location": "C:\\Users\\ADMIN\\PycharmProjects\\pc1\\flask\\static\\img",
+    "upload_in_server": "http://localhost/phpmyadmin/sql.php?server=1&db=sampledb1&table=posts&pos=0"
+  }
+}

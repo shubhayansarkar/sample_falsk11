@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url({{ url_for('static',filename='img/home-bg.jpg') }})">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>{{params['blogname']}}</h1>
+            <span class="subheading">subheading</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+
+
+     {% for post in posters %}
+
+        <div class="post-preview">
+          <a href="/post/{{post.slug}}">
+            <h2 class="post-title">
+                {{post.title}}
+            </h2>
+            <h3 class="post-subtitle">
+              {{post.tagline}}
+            </h3>
+          </a>
+          <p class="post-meta">Posted by
+            <a href="{{params['fb_url']}}" target="_blank">sarkar</a>
+            on {{post.date}}</p>
+            {{post.content[0:7]}}...
+
+        </div>
+        <hr>
+        {% endfor %}
+
+
+        <!-- Pager -->
+          <hr>
+        <div class="clearfix">
+          <a class="btn btn-primary float-right" href="{{next}}">Newer Posts &#8594</a>
+          <a class="btn btn-primary float-left" href="{{prev}}">&#8592 Older Posts </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
